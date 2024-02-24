@@ -13,7 +13,7 @@ source:
 build:
   noarch: python
   script: python -m pip install --no-deps -vv .
-  number: 0
+  number: 1
   entry_points:
     - dgcode_newsimproject = simplebuild_dgcode._cli:newsimproject
 
@@ -33,7 +33,7 @@ test:
     - c-compiler
     - cxx-compiler
     - pip
-    - geant4
+    - geant4 >=11.0.0
     - ncrystal
 
 about:
