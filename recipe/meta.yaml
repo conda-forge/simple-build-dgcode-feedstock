@@ -1,4 +1,4 @@
-{% set version = "1.0.0" %}
+{% set version = "1.1.0" %}
 
 #NB: get sha256 from https://pypi.org/project/simple-build-dgcode/#files
 
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/s/simple-build-dgcode/simple-build-dgcode-{{ version }}.tar.gz
-  sha256: 46ce1e8f57463ea856c8cf6e8387f69d45d0cd12cd90b216bb85360f67bb32f6
+  sha256: 6acfa42bafa21bb3c40036f2a6d75e062a92265641f3c1d6ad1fadcc9d7b7f84
 
 build:
   noarch: python
