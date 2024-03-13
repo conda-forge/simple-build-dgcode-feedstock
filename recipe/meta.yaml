@@ -13,7 +13,7 @@ source:
 build:
   noarch: python
   script: python -m pip install --no-deps -vv .
-  number: 0
+  number: 1
   entry_points:
     - dgcode_newsimproject = simplebuild_dgcode._cli:newsimproject
 
@@ -25,7 +25,7 @@ requirements:
     - setuptools
   run:
     - python >=3.8
-    - simple-build-system >=0.0.39
+    - simple-build-system >=1.1.0
 
 test:
   requires:
