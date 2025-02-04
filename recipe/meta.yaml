@@ -29,7 +29,7 @@ requirements:
 test:
   requires:
     # Note: The actual tests are defined in run_test.sh
-    - python >={{ python_min }}
+    - python {{ python_min }}
     - c-compiler
     - cxx-compiler
     - ncrystal
