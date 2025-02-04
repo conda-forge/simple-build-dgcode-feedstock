@@ -12,23 +12,24 @@ source:
 build:
   noarch: python
   script: python -m pip install --no-deps -vv .
-  number: 0
+  number: 1
   entry_points:
     - dgcode_newsimproject = simplebuild_dgcode._cli:newsimproject
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - pip
     - setuptools-git-versioning
     - setuptools
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - simple-build-system >=1.2.6
 
 test:
   requires:
     # Note: The actual tests are defined in run_test.sh
+    - python >={{ python_min }}
     - c-compiler
     - cxx-compiler
     - ncrystal
@@ -42,7 +43,7 @@ test:
 
 about:
   home: https://mctools.github.io/simplebuild-dgcode
-  summary: A very simple to use build system for scientific projects with C++/Python.
+  summary: A set of simplebuild packages implementing a Geant4-based simulation framework
   description: |
     A set of simplebuild packages implementing "dgcode", a Geant4-based
     simulation framework. It is primarily intended for usage for simulation of
