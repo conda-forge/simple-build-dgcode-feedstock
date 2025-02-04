@@ -7,7 +7,7 @@ Home: https://mctools.github.io/simplebuild-dgcode
 
 Package license: Apache-2.0
 
-Summary: A very simple to use build system for scientific projects with C++/Python.
+Summary: A set of simplebuild packages implementing a Geant4-based simulation framework
 
 Development: https://github.com/mctools/simplebuild-dgcode
 
