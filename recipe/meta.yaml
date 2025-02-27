@@ -1,4 +1,4 @@
-{% set version = "1.6.1" %}
+{% set version = "1.6.2" %}
 
 package:
   name: simple-build-dgcode
@@ -7,12 +7,12 @@ package:
 source:
   url: https://pypi.org/packages/source/s/simple-build-dgcode/simple_build_dgcode-{{ version }}.tar.gz
   #NB: get sha256 from https://pypi.org/project/simple-build-dgcode/#files
-  sha256: 59edfd2731e0a2063d5076c60906d7dac7333b40497260b9fb7dfc318205e41b
+  sha256: ab9c1340da0d07363df0065c6c56859c7d5a31911783be474b005de9b4e8031b
 
 build:
   noarch: python
   script: python -m pip install --no-deps -vv .
-  number: 1
+  number: 0
   entry_points:
     - dgcode_newsimproject = simplebuild_dgcode._cli:newsimproject
 
