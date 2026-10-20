@@ -45,6 +45,7 @@ tests:
         - c-compiler
         - cxx-compiler
         - ncrystal
+        - zlib
         - pip
         #Unfortunately the geant4 packages are inconsistent/outdated (see
         #https://github.com/conda-forge/geant4-feedstock/issues/65), so we try
