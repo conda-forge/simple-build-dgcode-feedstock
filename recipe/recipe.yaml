@@ -1,0 +1,67 @@
+schema_version: 1
+
+context:
+  version: "1.8.0"
+
+package:
+  name: simple-build-dgcode
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/s/simple-build-dgcode/simple_build_dgcode-${{ version }}.tar.gz
+  #NB: get sha256 from https://pypi.org/project/simple-build-dgcode/#files
+  sha256: e59e0f1df1f5b61d49ed2a4b1228fa03ce3c719df66bf05fdb0ac24ea7e0596b
+
+build:
+  number: 0
+  noarch: python
+  script: python -m pip install --no-deps -vv .
+  python:
+    entry_points:
+      - dgcode_newsimproject = simplebuild_dgcode._cli:newsimproject
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - pip >=26.2.2
+    - setuptools
+    - setuptools-git-versioning
+  run:
+    - python >=${{ python_min }}
+    - simple-build-system >=1.8.0
+
+tests:
+  - python:
+      imports:
+        - simplebuild_dgcode
+      pip_check: true
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
+  - script: run_test.sh
+    requirements:
+      run:
+        - python ${{ python_min }}.*
+        - c-compiler
+        - cxx-compiler
+        - ncrystal
+        - zlib
+        - pip >=26.2.2
+        - geant4 >=11.4.3,<11.5
+
+about:
+  homepage: https://mctools.github.io/simplebuild-dgcode
+  summary: A set of simplebuild packages implementing a Geant4-based simulation framework
+  description: |
+    A set of simplebuild packages implementing "dgcode", a Geant4-based
+    simulation framework. It is primarily intended for usage for simulation of
+    thermal neutron detectors and related projects, and it originated in the
+    Detector Group at the European Spallation Source ERIC.
+  license: Apache-2.0
+  license_file: LICENSE
+  documentation: https://mctools.github.io/simplebuild-dgcode
+  repository: https://github.com/mctools/simplebuild-dgcode
+
+extra:
+  recipe-maintainers:
+    - tkittel
