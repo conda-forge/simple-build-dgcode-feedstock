@@ -23,7 +23,7 @@ build:
 requirements:
   host:
     - python ${{ python_min }}.*
-    - pip
+    - pip >=26.2.2
     - setuptools
     - setuptools-git-versioning
   run:
@@ -46,7 +46,7 @@ tests:
         - cxx-compiler
         - ncrystal
         - zlib
-        - pip
+        - pip >=26.2.2
         - geant4 >=11.4.3,<11.5
 
 about:
