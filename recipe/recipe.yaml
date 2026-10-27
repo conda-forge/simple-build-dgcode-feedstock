@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "2.0.0"
+  version: "2.0.1"
 
 package:
   name: simple-build-dgcode
@@ -10,7 +10,7 @@ package:
 source:
   url: https://pypi.org/packages/source/s/simple-build-dgcode/simple_build_dgcode-${{ version }}.tar.gz
   #NB: get sha256 from https://pypi.org/project/simple-build-dgcode/#files
-  sha256: bf4db5066c056f90d6cf952a1164f0d9dac718a951b688173aecad4b929e97dd
+  sha256: 6308f7dfa9451a21eb49e0fd335bf269f87aadcc63b33cff0b3f910a971fc330
 
 build:
   number: 0
