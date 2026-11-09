@@ -13,7 +13,7 @@ source:
   sha256: 82d640004617c67f8cf7916730f0262c6e54832c49c3e2b9cb377d4f23910941
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: python -m pip install --no-deps -vv .
   python:
@@ -28,7 +28,14 @@ requirements:
     - setuptools-git-versioning
   run:
     - python >=${{ python_min }}
-    - simple-build-system >=2.0.0
+    - simple-build-system >=2.2.0
+  run_constraints:
+    - mcpl >=2.2.8
+    - mcpl-core >=2.2.8
+    - mcpl-python >=2.2.8
+    - ncrystal >=4.4.6
+    - ncrystal-lib >=4.4.6
+    - ncrystal-python >=4.4.6
 
 tests:
   - python:
@@ -44,7 +51,8 @@ tests:
         - python ${{ python_min }}.*
         - c-compiler
         - cxx-compiler
-        - ncrystal
+        - ncrystal >=4.4.6
+        - mcpl >=2.2.8
         - zlib
         - pip >=26.2.2
         - geant4 >=11.4.3,<11.5
