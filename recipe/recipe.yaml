@@ -31,7 +31,11 @@ requirements:
     - simple-build-system >=2.2.0
   run_constraints:
     - mcpl >=2.2.8
+    - mcpl-core >=2.2.8
+    - mcpl-python >=2.2.8
     - ncrystal >=4.4.6
+    - ncrystal-lib >=4.4.6
+    - ncrystal-python >=4.4.6
 
 tests:
   - python:
